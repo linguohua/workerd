@@ -91,9 +91,11 @@ build:android64 --config=m64 --config=androidcommon --platforms=//:android_arm64
 build:androidx64 --config=m64 --config=androidcommon --platforms=//:android_x86-64
 build:linux64 --config=m64
 build:win64 --config=m64
-# lingh: for x64 linux host
+# lingh: for x64 linux and android host
 build:linux64 --host_cxxopt='-stdlib=libc++'
 build:linux64 --host_linkopt='-stdlib=libc++'
+build:android64 --host_cxxopt='-stdlib=libc++'
+build:android64 --host_linkopt='-stdlib=libc++'
 
 # build targets end
 
